@@ -1,7 +1,7 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLKings", "PLKings\PLKings.csproj", "{58CA3D58-4BE6-4D93-BA5C-D64882E098B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLKings", "PLKings\PLKings.csproj", "{0257E327-7082-4D45-8AFF-32EC14AD7110}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +11,13 @@ Global
 		Debug|iPhone = Debug|iPhone
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{58CA3D58-4BE6-4D93-BA5C-D64882E098B7}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
-		{58CA3D58-4BE6-4D93-BA5C-D64882E098B7}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{58CA3D58-4BE6-4D93-BA5C-D64882E098B7}.Release|iPhone.ActiveCfg = Release|iPhone
-		{58CA3D58-4BE6-4D93-BA5C-D64882E098B7}.Release|iPhone.Build.0 = Release|iPhone
-		{58CA3D58-4BE6-4D93-BA5C-D64882E098B7}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
-		{58CA3D58-4BE6-4D93-BA5C-D64882E098B7}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-		{58CA3D58-4BE6-4D93-BA5C-D64882E098B7}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{58CA3D58-4BE6-4D93-BA5C-D64882E098B7}.Debug|iPhone.Build.0 = Debug|iPhone
+		{0257E327-7082-4D45-8AFF-32EC14AD7110}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{0257E327-7082-4D45-8AFF-32EC14AD7110}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{0257E327-7082-4D45-8AFF-32EC14AD7110}.Release|iPhone.ActiveCfg = Release|iPhone
+		{0257E327-7082-4D45-8AFF-32EC14AD7110}.Release|iPhone.Build.0 = Release|iPhone
+		{0257E327-7082-4D45-8AFF-32EC14AD7110}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{0257E327-7082-4D45-8AFF-32EC14AD7110}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{0257E327-7082-4D45-8AFF-32EC14AD7110}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{0257E327-7082-4D45-8AFF-32EC14AD7110}.Debug|iPhone.Build.0 = Debug|iPhone
 	EndGlobalSection
 EndGlobal
