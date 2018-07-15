@@ -10,8 +10,8 @@ using System.CodeDom.Compiler;
 
 namespace PLKings
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("LoginViewController")]
+    partial class LoginViewController
     {
         void ReleaseDesignerOutlets ()
         {
