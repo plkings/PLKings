@@ -15,22 +15,22 @@ namespace PLKings
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton LoginButton { get; set; }
+        UIKit.UIButton logInButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton RegisterButton { get; set; }
+        UIKit.UIButton registerButton { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (LoginButton != null) {
-                LoginButton.Dispose ();
-                LoginButton = null;
+            if (logInButton != null) {
+                logInButton.Dispose ();
+                logInButton = null;
             }
 
-            if (RegisterButton != null) {
-                RegisterButton.Dispose ();
-                RegisterButton = null;
+            if (registerButton != null) {
+                registerButton.Dispose ();
+                registerButton = null;
             }
         }
     }
