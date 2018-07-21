@@ -8,6 +8,7 @@ namespace PLKings
     {
         public RegisterViewController (IntPtr handle) : base (handle)
         {
+            
         }
     }
 }
