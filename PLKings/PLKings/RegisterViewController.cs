@@ -1,8 +1,13 @@
 using Foundation;
 using System;
 using UIKit;
+using System.Net;
 using System.Net.Http;
 using System.Text;
+using RestSharp;
+using RestSharp.Authenticators;
+using System.Collections;
+using Newtonsoft.Json;
 
 namespace PLKings
 {
@@ -27,15 +32,37 @@ namespace PLKings
                 string sPassword = passwordTextField.Text;
                 string sConfirmPassword = confirmPasswordTextFIeld.Text;
 
+                //Check if passwords match
+
                 //Create the HTTP Request
-                var client = new HttpClient();
-                client.BaseAddress = new Uri("localhost:8080");
+                var client = new RestClient();
+                client.BaseUrl = new Uri("http://localhost:8080/PLKings/V1/register.php");
 
-                //string sJsonData = @"{""usernmae"": ""sUserName"", ""password"" : ""sPassword"", ""email"" : ""sEmailAddress"", ""name"" : ""sFullName""}";
-                string sJsonData = @"{""username"":""Hello""}";
+                var request = new RestRequest(Method.POST);
+                request.AddParameter("username", sUserName);
+                request.AddParameter("password", sPassword);
+                request.AddParameter("email", sEmailAddress);
+                request.AddParameter("name", sFullName);
 
-                var content = new StringContent(sJsonData, Encoding.UTF8, "apllication/json");
-                //HttpResponseMessage hrmResponse = await client.PostAsync("/PLKings/V1/register.php", content);
+                IRestResponse response = client.Execute(request);
+
+                if(response != null)
+                {
+                    if(response.StatusCode == HttpStatusCode.OK)
+                    {
+                        //Read the "Error" and "Message"
+                        //var content = response.Content;
+                        var JsonObject = response.Content;
+
+                        //False: User created succefully
+
+                        //True:Ethier use already created or some other error
+                        
+                    }
+
+                }
+
+                //Find way to give status
 
 
             };
