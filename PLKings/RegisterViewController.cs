@@ -95,10 +95,6 @@ namespace PLKings
                     }
 
                 }
-
-                //Find way to give status
-
-
             };
         }
     }
