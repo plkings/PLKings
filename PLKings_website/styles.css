@@ -1,4 +1,4 @@
-﻿body {
+body {
 }
 
 table, td, tr {
@@ -15,9 +15,17 @@ body {
 }
 
 #content {
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
+	margin: 50px auto;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+#locationContainer, #dayContainer, #barListing {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+img {
+	width: 100px;
+	height: 100px;
 }
