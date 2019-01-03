@@ -124,6 +124,14 @@
       <DependentUpon>RegisterViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Data.cs" />
+    <Compile Include="BarListMainViewControler.cs" />
+    <Compile Include="BarListMainViewControler.designer.cs">
+      <DependentUpon>BarListMainViewControler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BarListViewControler.cs" />
+    <Compile Include="BarListViewControler.designer.cs">
+      <DependentUpon>BarListViewControler.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

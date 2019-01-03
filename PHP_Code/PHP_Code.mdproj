@@ -1,0 +1,23 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ItemType>GenericProject</ItemType>
+    <ProjectGuid>{6CD0FCBB-5B8A-4904-A6C7-3E8930DAE433}</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Default|AnyCPU' ">
+    <OutputPath>.\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\Applications\MAMP\htdocs\php\Includes\Constant.php">
+      <Link>php\Includes\Constant.php</Link>
+    </None>
+    <None Include="..\..\..\..\..\Applications\MAMP\htdocs\php\Includes\DbConnect.php">
+      <Link>php\Includes\DbConnect.php</Link>
+    </None>
+    <None Include="..\..\..\..\..\Applications\MAMP\htdocs\php\Includes\DbOperation.php">
+      <Link>php\Includes\DbOperation.php</Link>
+    </None>
+    <None Include="..\..\..\..\..\Applications\MAMP\htdocs\php\V1\register.php">
+      <Link>php\V1\register.php</Link>
+    </None>
+  </ItemGroup>
+</Project>

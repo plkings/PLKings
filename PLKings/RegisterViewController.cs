@@ -37,7 +37,7 @@ namespace PLKings
 
                 //Create the HTTP Request
                 var client = new RestClient();
-                client.BaseUrl = new Uri("http://localhost:8080/PLKings/V1/register.php");
+                client.BaseUrl = new Uri("http://localhost:8888/php/V1/register.php");
 
                 var request = new RestRequest(Method.POST);
                 request.AddParameter("username", sUserName);
@@ -89,8 +89,6 @@ namespace PLKings
                                 validationLabel.Text = "Invalid request";
                             }
                         }
-
-                        //True:Ethier use already created or some other error
                         
                     }
 
