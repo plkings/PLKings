@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="ui-mobile">
+	<head>
+		<title>Your First Happy Hour Stop</title>
+        <link rel="stylesheet" href="styles.css"></link>
+		<script src="scripts.js"></script>
+	</head>
+	<body>
+		<div id="page">
+			<div id="content">
+				<div id="header">
+					<h1>PARKING LOT KINGS</h1>
+				</div>
+				<div id="barPage">
+					<div id="locationContainer" class="locationContainer">
+						<button id="defaultOpen" class="tablink" onclick="openPage('location5Points', this)" >5 Points</button>
+						<button class="tablink" onclick="openPage('locationAvondale', this)" >Avondale</button>
+						<button class="tablink" onclick="openPage('locationBeaches', this)" >Beaches</button>
+						<button class="tablink" onclick="openPage('locationRiverside', this)" >Riverside</button>
+					</div>
+					<div id="listingContainer">
+						<div id="dayContainer">
+								<table id="dayTable" >
+									<tr>
+										<td >S</td>
+										<td >M</td>
+										<td >T</td>
+										<td >W</td>
+										<td >T</td>
+										<td >F</td>
+										<td >S</td>
+									</tr>
+								</table>
+							</div>
+						<div id="barListing">
+							<div id="serachForm">
+							</div>
+							<div id="barContainer">
+								<table id="locationRiverside" class="tabContent">
+									<tr>
+										<td class="barLogo">
+											<img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/31690_423248689253_3061301_n.jpg?_nc_cat=106&_nc_ht=scontent-dfw5-1.xx&oh=ac8a2aec5e7054c745043c946e87cdb1&oe=5CCA353F" alt="The Loft logo">
+										</td>
+										<td class="barInfo">
+											<div class="barName">The Loft</div>
+											<div class="barSpecial">Drinks & Dancing</div>
+											<div class="ageReq">21+</div>
+											<div class="barAdress">925 King Street Jacksonville, FL, 32204</div>
+											<div class="barHours">8PM-2AM</div>
+										</td>
+									</tr>
+								</table>
+								<table id="location5Points" class="tabContent">
+									<tr>
+										<td class="barLogo">
+											<img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/10649543_1465687533709245_930632451650583011_n.jpg?_nc_cat=107&_nc_ht=scontent-dfw5-1.xx&oh=dcdb4424ef44c0c045d8111cf2bea6fa&oe=5CD2FD71" alt="Hoptinger Logo">
+										</td>
+										<td class="barInfo">
+											<div class="barName">Hoptinger</div>
+											<div class="barSpecial">$3 Local Beers | $3 House Wines | $3 3 Olives</div>
+											<div class="ageReq">18+</div>
+											<div class="barAdress"> 1037 Park St, Jacksonville, FL 32204</div>
+											<div class="barHours">11AM-2AM</div>
+										</td>
+									</tr>
+								</table>
+								<table id="locationAvondale" class = "tabContent">
+								</table>
+								<table id="locationBeaches" class="tabContent">
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="footer">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
