@@ -45,6 +45,22 @@ img {
 	background-color: #777;
 }
 
+.tablink {
+    text-align: left;
+}
+
 .daytab {
     width: 14.28%;
+}
+
+#header {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+#page {
+    overflow: hidden;
 }
