@@ -21,6 +21,7 @@ body {
 #locationContainer, #dayContainer, #barListing {
 	padding-top: 2px;
 	padding-bottom: 2px;
+    overflow: hidden;
 }
 
 img {
@@ -28,7 +29,7 @@ img {
 	height: 100px;
 }
 
-.tablink {
+.tablink, .daytab {
 	background-color: #555;
 	color: white;
 	float: left;
@@ -40,6 +41,10 @@ img {
 	width: 25%;
 }
 
-.tablink:hover {
+.tablink:hover, .daytab:hover {
 	background-color: #777;
+}
+
+.daytab {
+    width: 14.28%;
 }

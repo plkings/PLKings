@@ -12,5 +12,6 @@
   <ItemGroup>
     <None Include="MainOnePage.html" />
     <None Include="styles.css" />
+    <None Include="scripts.js" />
   </ItemGroup>
 </Project>
