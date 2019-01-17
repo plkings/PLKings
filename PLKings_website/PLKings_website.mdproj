@@ -13,5 +13,20 @@
     <None Include="MainOnePage.html" />
     <None Include="styles.css" />
     <None Include="scripts.js" />
+    <None Include="..\..\..\..\..\Applications\MAMP\htdocs\php\Examples\Includes\Constant.php">
+      <Link>php\Examples\Includes\Constant.php</Link>
+    </None>
+    <None Include="..\..\..\..\..\Applications\MAMP\htdocs\php\Examples\Includes\DbConnect.php">
+      <Link>php\Examples\Includes\DbConnect.php</Link>
+    </None>
+    <None Include="..\..\..\..\..\Applications\MAMP\htdocs\php\Examples\Includes\DbOperation.php">
+      <Link>php\Examples\Includes\DbOperation.php</Link>
+    </None>
+    <None Include="..\..\..\..\..\Applications\MAMP\htdocs\php\Examples\V1\register.php">
+      <Link>php\Examples\V1\register.php</Link>
+    </None>
+    <None Include="..\..\..\..\..\Applications\MAMP\htdocs\php\Includes\Constants.php">
+      <Link>php\Includes\Constants.php</Link>
+    </None>
   </ItemGroup>
 </Project>
