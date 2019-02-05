@@ -1,11 +1,11 @@
-window.onload = function ()
+$(document).ready(function()
 {
 	//Get the element with the id="defualtOpen" and click on it
 	document.getElementById("defaultOpen").click();
 
     DisplaySpecial(GetCurrentDay());
     
-}
+});
 
 function OpenPage(pageName,elemnt)
 {
