@@ -14,10 +14,14 @@
 				</div>
 				<div id="barPage">
 					<div id="locationContainer" class="locationContainer">
-						<button class="tablink" onclick="OpenPage('location5Points', this)" >5 Points</button>
-						<button class="tablink" onclick="OpenPage('locationAvondale', this)" >Avondale</button>
-						<button class="tablink" onclick="OpenPage('locationBeaches', this)" >Beaches</button>
-						<button id="defaultOpen" class="tablink" onclick="OpenPage('locationRiverside', this)" >Riverside</button>
+                            <div class="dropdown">
+                                <button onclick="">Location</button>
+                                <div class="dropdownContent">
+                                    <a href="#5Points">5 Points</a>
+                                    <a href="#Avondale">Avondale</a>
+                                    <a href="#Riverside">Riverside</a>
+                                </div>
+                            </div>
 					</div>
                     <div id="dayContainer">
                         <button id="sunday" class="daytab" onclick="DisplaySpecial(0)">Sunday</button>
