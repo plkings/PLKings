@@ -1,4 +1,76 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
+html, body {
+  padding: 0;
+  margin: 0;
+  display: block;
+  height: 100%;
+}
 
+body {
+  min-height: 100%;
+  font: 300 1em "Fira Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.gradient {
+  background: teal;
+  /*background: linear-gradient(teal, white, teal);
+  height: auto;*/
+}
+
+.main-container {
+  display: block;
+  /*border-radius: 10px;*/
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 100%;
+  width: 100%;
+  max-width: 840px;
+  background-color: teal;
+  box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.19), -10px 0px 20px rgba(0, 0, 0, 0.19);
+}
+
+.day-container {
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.day-button:hover,
+.day-button:focus {
+  /*Fill in;*/
+  box-shadow: inset 0 0 0 2em gray;
+  /*raise*/
+  /*box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);*/
+}
+
+button {
+  background: none;
+  border: 2px solid;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  color: black;
+  transition: 0.25s;
+}
+button:hover, button:focus {
+  border-color: gray;
+  color: #fff;
+}
+
+/*Old code below*/
+/*
 table {
     border: 1px solid black;
     border-collapse: collapse;
@@ -6,10 +78,6 @@ table {
 
 table {
     width:100%;
-}
-
-body {
-    background-color: teal;
 }
 
 #content {
@@ -88,3 +156,6 @@ img {
     display: block;
     position:absolute;
 }
+*/
+
+/*# sourceMappingURL=styles.css.map */
