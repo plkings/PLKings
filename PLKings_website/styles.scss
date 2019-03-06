@@ -1,81 +1,79 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
+@import "bootstrap-4.3.1/scss/bootstrap";
 
-html, body {
-    padding: 0;
-    margin: 0;
-    display: block;
-    height: 100%;
+html {
+	height: 100%;
 }
 
 body {
-    min-height: 100%;
+    height: inherit;
     font: 300 1em 'Fira Sans', sans-serif;
-}
-
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.gradient {
-    background: teal;
+	background: teal;
 }
 
 .main-container {
-    display: block;
-    margin-top: 0em;
-    margin-bottom: 0em;
-    height: 100%;
-    width: 100%;
-    max-width: 52.5em;
-    min-width: 52.5em;
-    background-color: teal;
-    box-shadow: .625em 0em 1.25em rgba(0,0,0,0.19),-.625em 0em 1.25em rgba(0,0,0,0.19);
+	height: inherit;
+	max-width: 52.5em;
+	min-width: 375px;
 }
 
-.barpage {
-    margin: 0.5em;
+@include media-breakpoint-between(xs, md) {
+	.main-container {
+		padding: 0;
+	}
+	
+	.day-button,
+	.location-button{
+		border: .05em solid;
+	}
 }
 
-.day-container {
-    width: 100%;
+@include media-breakpoint-between(lg, xl) {
+	.main-container {
+		box-shadow: .625em 0em 1.25em rgba(0,0,0,0.19),-.625em 0em 1.25em rgba(0,0,0,0.19);
+	}
+	
+	.day-button,
+	.location-button {
+		border: .125em solid;
+	}
+	
+}
+
+.day-container{
     height: 3.75em;
-    justify-content: center;
+	justify-content: center;
     align-content: center;
     align-items: center;
     text-align: center;
     display: flex;
 }
 
-.location-container {
-    width: 100%;
-    height: 3.75em;
-    padding-bottom: .5em;
-    padding-top: .5em;
-}
-
-.location {
-    text-align-last: center;
-    margin: 0.1em;
-    padding: 1em 2em;
-    border: .125em solid;
-    background: teal;
-    font: inherit;
+.day-button {
+    background: none;
     border-radius: .25em;
-    cursor: pointer;
+    line-height: 1;
+    margin: .08em;
+//    padding: 1em 2em;
+    color: black;
+    transition: .25s;
+    font: inherit;
+    height: 80%;
+    width: 13.5%;
+	justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
 
-    &:focus,
-    &:hover {
+    &:hover,
+    &:focus {
+		border-color: black;
+        background-color: var(--hover);
+        color: white;
         outline: none;
-        //border-color: black;
-        //box-shadow: inset 0 0 0 2em darken(teal, 5%);
-        //color: #fff
     }
 }
-
 
 $color: teal;
 $value: 3%;
@@ -93,27 +91,48 @@ $value: 3%;
     transform: translateY(-0.25em);
 }
 
+//-------------------------------------------------------------------------
 
-
-button {
-    background: none;
-    border: .125em solid;
-    border-radius: .25em;
-    line-height: 1;
-    margin: 0.1em;
-    padding: 1em 2em;
-    color: black;
-    transition: .25s;
-    font: inherit;
-    height: 100%;
-    width: 7.5em;
-
-
-    &:hover,
-    &:focus {
-        border-color: black;
-        background-color: var(--hover);
-        color: #fff;
+.location-button{
+	height: 80%;
+	background: teal;
+	border-color: black;
+	text-align-last: center;
+	border-radius: .25em;
+	min-width: 27%;
+	
+	&:focus,
+    &:hover {
         outline: none;
+        box-shadow: inset 0 0 0 2em darken(teal, 5%);
+        color: #fff;
+    }
+}
+
+.dropdown-menu {
+	width: 27%;
+	text-align: center;
+}
+
+.location-container {
+    height: 3.75em;
+	justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+.location {
+    //margin: 0.1em;
+    //padding: 1em 2em;
+    //cursor: pointer;
+
+
+    &:focus,
+    &:hover {
+        //outline: none;
+        //border-color: black;
+        //box-shadow: inset 0 0 0 2em darken(teal, 5%);
+        //color: #fff;
     }
 }
