@@ -78,7 +78,7 @@ body {
 
 
 $color: teal;
-$value: 5%;
+$value: 3%;
 
 :root {
     --hover: #{darken($color, $value)};
@@ -89,7 +89,7 @@ $value: 5%;
     /*Fill in;*/
     //box-shadow: inset 0 0 0 2em var(--hover);
     /*raise*/
-    box-shadow: 0 0.5em 0.5em -0.3em var(--hover), inset 0 0 0 2em var(--hover);
+    box-shadow: 0 0.5em 0.5em -0.3em var(--hover);
     transform: translateY(-0.25em);
 }
 
@@ -112,6 +112,7 @@ button {
     &:hover,
     &:focus {
         border-color: black;
+        background-color: var(--hover);
         color: #fff;
         outline: none;
     }

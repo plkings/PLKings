@@ -70,14 +70,14 @@ body {
 }
 
 :root {
-  --hover: #006767;
+  --hover: #007171;
 }
 
 .day-button:hover,
 .day-button:focus {
   /*Fill in;*/
   /*raise*/
-  box-shadow: 0 0.5em 0.5em -0.3em var(--hover), inset 0 0 0 2em var(--hover);
+  box-shadow: 0 0.5em 0.5em -0.3em var(--hover);
   transform: translateY(-0.25em);
 }
 
@@ -96,6 +96,7 @@ button {
 }
 button:hover, button:focus {
   border-color: black;
+  background-color: var(--hover);
   color: #fff;
   outline: none;
 }
