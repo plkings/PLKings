@@ -60,44 +60,42 @@ body {
   margin: 0.1em;
   padding: 1em 2em;
   border: 0.125em solid;
-  background: transparent;
+  background: teal;
   font: inherit;
   border-radius: 0.25em;
   cursor: pointer;
 }
 .location:focus, .location:hover {
   outline: none;
-  background-color: #006767;
-  color: #fff;
 }
 
 :root {
-  --hover: black;
+  --hover: #006767;
 }
 
 .day-button:hover,
 .day-button:focus {
   /*Fill in;*/
   /*raise*/
-  box-shadow: 0 0.5em 0.5em -0.3em var(--hover), inset 0 0 0 2em #006767;
+  box-shadow: 0 0.5em 0.5em -0.3em var(--hover), inset 0 0 0 2em var(--hover);
   transform: translateY(-0.25em);
 }
 
 button {
-  background: teal;
+  background: none;
   border: 0.125em solid;
   border-radius: 0.25em;
   line-height: 1;
   margin: 0.1em;
   padding: 1em 2em;
   color: black;
-  transition: 0.35s;
+  transition: 0.25s;
   font: inherit;
   height: 100%;
   width: 7.5em;
 }
 button:hover, button:focus {
-  border-color: var(--hover);
+  border-color: black;
   color: #fff;
   outline: none;
 }
