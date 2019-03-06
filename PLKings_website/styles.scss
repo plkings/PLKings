@@ -2,16 +2,15 @@
 
 html, body {
     padding: 0;
-	margin: 0;
+    margin: 0;
     display: block;
     height: 100%;
-
 }
+
 body {
     min-height: 100%;
-    font: 300 1em 'Fira Sans', sans-serif;
+    font: 300 1em "Fira Sans", sans-serif;
 }
-
 
 .container {
     display: flex;
@@ -31,18 +30,17 @@ body {
     height: 100%;
     width: 100%;
     max-width: 52.5em;
-	min-width: 52.5em;
+    min-width: 52.5em;
     background-color: teal;
-    box-shadow: .625em 0em 1.25em rgba(0,0,0,0.19),-.625em 0em 1.25em rgba(0,0,0,0.19);
+    box-shadow: 0.625em 0em 1.25em rgba(0, 0, 0, 0.19), -0.625em 0em 1.25em rgba(0, 0, 0, 0.19);
 }
 
-.barpage{
-	margin: 0.5em;
-
+.barpage {
+    margin: 0.5em;
 }
 
 .day-container {
-	width: 100%;
+    width: 100%;
     height: 3.75em;
     justify-content: center;
     align-content: center;
@@ -52,68 +50,59 @@ body {
 }
 
 .location-container {
-	width: 100%;
+    width: 100%;
     height: 3.75em;
-	padding-bottom: .5em;
-	padding-top: .5em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
 }
 
 .location {
-	text-align-last: center;
+    text-align-last: center;
     margin: 0.1em;
     padding: 1em 2em;
-	border: .125em solid;
-	background: teal;
-	font: inherit;
-	border-radius: .25em;
-	cursor: pointer;
-
-	&:focus,
-	&:hover {
-		outline: none;
-		//border-color: black;
-		//box-shadow: inset 0 0 0 2em darken(teal, 5%);
-		//color: #fff
-	}
+    border: 0.125em solid;
+    background: transparent;
+    font: inherit;
+    border-radius: 0.25em;
+    cursor: pointer;
 }
 
-
-$color: black;
-$value: 45deg;
+.location:focus, .location:hover {
+    outline: none;
+    background-color: #006767;
+    color: #fff;
+}
 
 :root {
-	--hover: #{adjust-hue( $color, $value)};
+    --hover: black;
 }
 
 .day-button:hover,
 .day-button:focus {
     /*Fill in;*/
-    //box-shadow: inset 0 0 0 2em var(--hover);
     /*raise*/
-    box-shadow: 0 0.5em 0.5em -0.3em var(--hover);
+    box-shadow: 0 0.5em 0.5em -0.3em var(--hover), inset 0 0 0 2em #006767;
     transform: translateY(-0.25em);
 }
 
-
-
 button {
-    background: none;
-    border: .125em solid;
-	border-radius: .25em;
+    background: teal;
+    border: 0.125em solid;
+    border-radius: 0.25em;
     line-height: 1;
     margin: 0.1em;
     padding: 1em 2em;
-    color: $color;
-    transition: .25s;
-	font: inherit;
-	height: 100%;
-	width: 7.5em;
+    color: black;
+    transition: 0.35s;
+    font: inherit;
+    height: 100%;
+    width: 7.5em;
+}
 
+button:hover, button:focus {
+    border-color: var(--hover);
+    color: #fff;
+    outline: none;
+}
 
-    &:hover,
-    &:focus {
-        border-color: var(--hover);
-        color: #fff;
-		outline: none;
-    }
-} 
+/*# sourceMappingURL=styles.css.map */
