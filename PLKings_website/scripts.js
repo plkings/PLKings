@@ -1,4 +1,4 @@
-$(document).ready(function()
+/*$(document).ready(function()
 {
 	//Get the element with the id="defualtOpen" and click on it
 	document.getElementById("defaultOpen").click();
@@ -110,4 +110,5 @@ function GetCurrentDay()
 
     return day;
 }
+*/
     
