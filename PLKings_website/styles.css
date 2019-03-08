@@ -9790,6 +9790,12 @@ body {
 
 .bar-card {
   background: teal;
+  height: 100%;
+  display: flex;
+}
+
+.card-subtitle {
+  color: #cdc9c9;
 }
 
 /*# sourceMappingURL=styles.css.map */

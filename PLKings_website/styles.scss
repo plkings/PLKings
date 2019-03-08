@@ -155,9 +155,19 @@ $value: 3%;
 }
 
 .bar-card {
-	background: teal;
+    background: teal;
+    height: 100%;
+    display: flex;
 }
 
+.card-body {
+    //padding-top: .5em;
+    //padding-left: 1em;
+}
+
+.card-subtitle {
+    color: #cdc9c9;
+}
 .bar-info-container {
 }
 
