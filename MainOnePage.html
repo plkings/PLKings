@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Your First Happy Hour Stop</title>
+</head>
+    <body>
+        <!--main class="container-1 gradient">-->
+        <div class="container main-container" id="main-container">
+			<div class="day-container">
+				<a class="btn day-button" href="#" role="button" id="sunday" onclick="DisplaySpecial(0)">Sun</a>
+				<a class="btn day-button" href="#" role="button" id="monday" onclick="DisplaySpecial(1)" >Mon</a>
+				<a class="btn day-button" href="#" role="button" id="tuesday" onclick="DisplaySpecial(2)">Tue</a>
+				<a class="btn day-button" href="#" role="button" id="wednesday" onclick="DisplaySpecial(3)">Wed</a>
+				<a class="btn day-button" href="#" role="button" id="thursday" onclick="DisplaySpecial(4)">Thu</a>
+				<a class="btn day-button" href="#" role="button" id="friday" onclick="DisplaySpecial(5)">Fri</a>
+				<a class="btn day-button" href="#" role="button" id="saturday" onclick="DisplaySpecial(6)">Sat</a> 
+			</div>
+
+			<div class="dropdown show location-container">
+				<button class="btn dropdown-toggle location-button" href="#" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Location                                       
+				</button>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					<a class="dropdown-item" href="#">5 Points</a>
+					<a class="dropdown-item" href="#">Avondale</a>
+					<a class="dropdown-item" href="#">Riverside</a>
+				</div>
+			</div>
+			<div class="listing-container" id="listing-container">
+                <div class="card bar-card">
+                    <div class="row no-gutters">
+                        <div class="col- logo-container">
+                            <img src="images/mossFireGrilLogo.jpeg" class="card-img logo" alt="...">
+							 <div class="col- bar-info-container">
+								<div class="card-body">
+									<h5 class="card-title">The Mossfire Grill</h5>
+									<p class="card-subtitle">1537 Margaret St, Jacksonville, FL 32204</p>
+									<p class="card-subtitle hours">Hours: 11AM-9PM</p>
+									<p class="card-subtitle hours">HH Hours: 3PM-7PM</p>
+								</div> 
+							</div>
+                        </div>
+						<div class="col- bar-special-container">
+							<div class="card-body day-special-container">
+								<p class="card-text sunday-special">Happy Hour Night- Our Happy Hour runs 3pm-close! | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor  | $4.00 Glass House wine </p>
+								<p class="card-text monday-special">Margarita Night- $3.50 House, $4.50 Flavored all night long | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+								<p class="card-text tuesday-special">Smirnoff Vodka Night- $5 Smirnoff drinks all night long | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+								<p class="card-text wednesday-special">Margarita Night- $3.50 House, $4.50 Flavored all night long | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+								<p class="card-text thursday-special">Draft Beer Night- $2.50 Domestics, $3.50 Microbrews all night long | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+								<p class="card-text friday-special">$3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+								<p class="card-text saturday-special">$3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+							</div>
+						</div>
+                    </div>
+                </div>
+				<div class="card bar-card">
+					<div class="row no-gutters">
+						<div class="logo-container">
+							<img src="images/hoptingerLogo.png" class="card-img logo" alt="...">
+							<div class="bar-info-container">
+								<div class="card-body">
+									<h5 class="card-title">Hoptinger</h5>
+									<p class="card-subtitle">1037 Park St, Jacksonville, FL 32204</p>
+									<p class="card-subtitle hours">Hours: 11AM-9PM</p>
+									<p class="card-subtitle hours">HH Hours: 3PM-7PM</p>
+								</div>
+							</div>
+						</div>
+						<div class="col- bar-special-container">
+							<div class="card-body day-special-container">
+								<p class="card-text sunday-special">$3 Local Beers | $3 3 olives Flavored Vodkas | $3 Sailor Jerry | $3 Tullamore D.E.W. | $3 Bar Snacks | $3 House Wines | $3 Cazadores Resposado | $5 Beer Cocktails| $10 Beer Flights</p>
+							</div>
+						</div>
+					</div>
+                </div>
+				<div class="card bar-card">
+					<div class="row no-gutters">
+						<div class="logo-container">
+							<img src="images/rainDogsLogo.jpg" class="card-img logo" alt="...">
+							<div class="col- bar-info-container">
+								<div class="card-body">
+									<h5 class="card-title">Rain Dogs</h5>
+									<p class="card-subtitle">1045 Park St, Jacksonville, FL 32204</p>
+									<p class="card-subtitle hours">Hours: 11AM-9PM</p>
+									<p class="card-subtitle hours">HH Hours: 3PM-7PM</p>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+			</div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="scripts.js"></script>
+    </body>
+</html>
