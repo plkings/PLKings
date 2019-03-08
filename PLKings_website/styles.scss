@@ -136,22 +136,22 @@ $value: 3%;
 	max-height: 100%;
 }
 .card {
-	height: 6.125em;
+	height: 7.125em;
 }
 
 .logo-container {
-		border-radius: inherit;
-		width: 10%;
-		height: 100%;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		display: flex;
+	border-radius: inherit;
+	height: 100%;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+	display: flex;
 }
 
 .logo {
-	max-height: 100%;
-	max-width: 100%;
+	//max-height: 100%;
+    height: 110px;
+    width: 110px;
 }
 
 .bar-card {

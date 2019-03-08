@@ -9678,7 +9678,8 @@ body {
   }
 
   .day-button,
-.location-button {
+.location-button,
+.card {
     border: 0.05em solid;
   }
 }
@@ -9688,7 +9689,8 @@ body {
   }
 
   .day-button,
-.location-button {
+.location-button,
+.card {
     border: 0.125em solid;
   }
 }
@@ -9761,6 +9763,33 @@ body {
   align-items: center;
   text-align: center;
   display: flex;
+}
+
+.row {
+  height: 100%;
+  max-height: 100%;
+}
+
+.card {
+  height: 7.125em;
+}
+
+.logo-container {
+  border-radius: inherit;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.logo {
+  height: 110px;
+  width: 110px;
+}
+
+.bar-card {
+  background: teal;
 }
 
 /*# sourceMappingURL=styles.css.map */
