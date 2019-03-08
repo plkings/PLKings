@@ -1,5 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600';
 @import "bootstrap-4.3.1/scss/bootstrap";
+$teal: teal;
+$value: 3%;
+$color: $teal;
+
 
 //-----------------Main container-----------------
 
@@ -10,7 +14,7 @@ html {
 body {
     height: inherit;
     font: 300 1em 'Fira Sans', sans-serif;
-	background: teal;
+	background: $teal;
 }
 
 .main-container {
@@ -83,9 +87,6 @@ body {
     }
 }
 
-$color: teal;
-$value: 3%;
-
 :root {
     --hover: #{darken($color, $value)};
 }
@@ -102,7 +103,7 @@ $value: 3%;
 //-----------------Location style-----------------
 .location-button{
 	height: 80%;
-	background: teal;
+	background: $teal;
 	border-color: black;
 	text-align-last: center;
 	border-radius: .25em;
@@ -111,7 +112,7 @@ $value: 3%;
 	&:focus,
     &:hover {
         outline: none;
-        box-shadow: inset 0 0 0 2em darken(teal, 5%);
+        box-shadow: inset 0 0 0 2em darken($teal, 5%);
         color: #fff;
     }
 }
@@ -133,6 +134,10 @@ $value: 3%;
 
 $sub-color: #fff;
 
+.listing-container {
+	color: #F5F5F5;
+}
+
 .row {
 	height: 100%;
 	max-height: 100%;
@@ -151,32 +156,54 @@ $sub-color: #fff;
 }
 
 .logo {
-	//max-height: 100%;
     height: 110px;
     width: 110px;
 }
 
-.bar-card {
-    background: teal;
-    height: 100%;
-    display: flex;
+.card-body {
+	padding-left: 5px;
+	padding-top: 5px;
+	padding-bottom: 0px;
+	padding-right: 5px;
 }
 
-.card-body {
-	height: 100;
-	
+.bar-card {
+    background: $teal;
+    height: 100%;
+    display: flex;
+	margin-top: 5px;
+	border-left: transparent;
+	border-right: transparent;
+	border-bottom: transparent;
+	border-top: .125em dotted black;
+	border-radius: 0;
 }
 
 .card-title {
 	max-width: 250px;
+	margin-bottom: 0.175rem;
 }
 
 .card-subtitle {
-    color: $sub-color;
+    //color: black;
 	max-width: 215px;
+	margin: .2rem;
+	font-size: .9em;
 }
 
 .bar-info-container {
 	text-align: left;
+	height: 110px;
+}
+
+.bar-special-container {
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+	display: flex;
+	max-width: 400px;
+}
+
+.hours {
 	
 }
