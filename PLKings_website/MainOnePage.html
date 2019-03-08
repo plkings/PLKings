@@ -12,15 +12,15 @@
 </head>
     <body>
         <!--main class="container-1 gradient">-->
-        <div class="container main-container">
+        <div class="container main-container" id="main-container">
 			<div class="day-container">
-				<a class="btn day-button" href="#" role="button" id="sunday">Sun</a>
-				<a class="btn day-button" href="#" role="button" id="monday">Mon</a>
-				<a class="btn day-button" href="#" role="button" id="tuesday">Tue</a>
-				<a class="btn day-button" href="#" role="button" id="wednesday">Wed</a>
-				<a class="btn day-button" href="#" role="button" id="thursday">Thu</a>
-				<a class="btn day-button" href="#" role="button" id="friday">Fri</a>
-				<a class="btn day-button" href="#" role="button" id="saturday">Sat</a> 
+				<a class="btn day-button" href="#" role="button" id="sunday" onclick="DisplaySpecial(0)">Sun</a>
+				<a class="btn day-button" href="#" role="button" id="monday" onclick="DisplaySpecial(1)" >Mon</a>
+				<a class="btn day-button" href="#" role="button" id="tuesday" onclick="DisplaySpecial(2)">Tue</a>
+				<a class="btn day-button" href="#" role="button" id="wednesday" onclick="DisplaySpecial(3)">Wed</a>
+				<a class="btn day-button" href="#" role="button" id="thursday" onclick="DisplaySpecial(4)">Thu</a>
+				<a class="btn day-button" href="#" role="button" id="friday" onclick="DisplaySpecial(5)">Fri</a>
+				<a class="btn day-button" href="#" role="button" id="saturday" onclick="DisplaySpecial(6)">Sat</a> 
 			</div>
 
 			<div class="dropdown show location-container">
@@ -33,7 +33,7 @@
 					<a class="dropdown-item" href="#">Riverside</a>
 				</div>
 			</div>
-			<div class="listing-container">
+			<div class="listing-container" id="listing-container">
                 <div class="card bar-card">
                     <div class="row no-gutters">
                         <div class="col- logo-container">
@@ -48,8 +48,14 @@
 							</div>
                         </div>
 						<div class="col- bar-special-container">
-							<div class="card-body">
-								<p class="card-text">Happy Hour Night- Our Happy Hour runs 3pm-close! | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor  | $4.00 Glass House wine </p>
+							<div class="card-body day-special-container">
+								<p class="card-text sunday-special">Happy Hour Night- Our Happy Hour runs 3pm-close! | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor  | $4.00 Glass House wine </p>
+								<p class="card-text monday-special">Margarita Night- $3.50 House, $4.50 Flavored all night long | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+								<p class="card-text tuesday-special">Smirnoff Vodka Night- $5 Smirnoff drinks all night long | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+								<p class="card-text wednesday-special">Margarita Night- $3.50 House, $4.50 Flavored all night long | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+								<p class="card-text thursday-special">Draft Beer Night- $2.50 Domestics, $3.50 Microbrews all night long | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+								<p class="card-text friday-special">$3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+								<p class="card-text saturday-special">$3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
 							</div>
 						</div>
                     </div>
@@ -68,8 +74,8 @@
 							</div>
 						</div>
 						<div class="col- bar-special-container">
-							<div class="card-body">
-								<p class="card-text">$3 Local Beers | $3 3 olives Flavored Vodkas | $3 Sailor Jerry | $3 Tullamore D.E.W. | $3 Bar Snacks | $3 House Wines | $3 Cazadores Resposado | $5 Beer Cocktails| $10 Beer Flights</p>
+							<div class="card-body day-special-container">
+								<p class="card-text sunday-special">$3 Local Beers | $3 3 olives Flavored Vodkas | $3 Sailor Jerry | $3 Tullamore D.E.W. | $3 Bar Snacks | $3 House Wines | $3 Cazadores Resposado | $5 Beer Cocktails| $10 Beer Flights</p>
 							</div>
 						</div>
 					</div>

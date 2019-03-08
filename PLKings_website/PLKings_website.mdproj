@@ -28,5 +28,6 @@
     <None Include="..\..\..\..\..\Applications\MAMP\htdocs\php\Includes\Constants.php">
       <Link>php\Includes\Constants.php</Link>
     </None>
+    <None Include="styles.scss" />
   </ItemGroup>
 </Project>

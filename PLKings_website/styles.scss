@@ -21,6 +21,7 @@ body {
 	height: inherit;
 	max-width: 52.5em;
 	min-width: 375px;
+	display: none;
 }
 
 //-----------------Scaling style-----------------
@@ -62,11 +63,9 @@ body {
 }
 
 .day-button {
-    background: none;
     border-radius: .25em;
     line-height: 1;
     margin: .08em;
-//    padding: 1em 2em;
     color: black;
     transition: .25s;
     font: inherit;
@@ -130,7 +129,7 @@ body {
     display: flex;
 }
 
-//-----------------Bar style-----------------
+//-----------------Bar Card style-----------------
 
 $sub-color: #fff;
 
@@ -204,6 +203,11 @@ $sub-color: #fff;
 	max-width: 400px;
 }
 
+.card-text:last-child {
+	margin-bottom: 1rem;
+}
+
 .hours {
-	
+	//color: white;
+	//text-shadow:  -.5px -.5px 0 #000,.5px -.5px 0 #000,-.5px .5px 0 #000,.5px .5px 0 #000;
 }
