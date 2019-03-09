@@ -8,26 +8,24 @@
     
 });
 
-function OpenPage(pageName,elemnt)
+//Need make this more scalable
+function OpenPage(location, elemnt)
 {
-	var i, tabContent, tabLinks;
-	tabContent = document.getElementsByClassName("tabContent");
-	
-	//Hide all the tabContents
-	for(i=0; i < tabContent.length; i++)
-	{
-		tabContent[i].style.display = "none";
-	}
-	tabLinks = document.getElementsByClassName("tablink");
-	
-	//Set all button color background to default
-	for(i=0; i < tabLinks.length; i++)
-	{
-		tabLinks[i].style.backgroundColor = "";
-	}
-	
-	document.getElementById(pageName).style.display = "block";
-	elemnt.style.backgroundColor = "teal";
+	var i, text;
+
+    //Display bar-cards with class the same as location
+    $('.bar-card').each(function (){
+        if($(this).hasClass(location)) {
+            $(this).css("display", "block");
+        }
+        else {
+            $(this).css("display", "none");
+        }
+    });
+
+    text = $(elemnt).text();
+
+    $('#dropdownMenuButton').html(text);
 }
 
 function DisplaySpecial(day){
