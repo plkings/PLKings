@@ -1,10 +1,10 @@
  $(document).ready(function()
 {
 	//Get the element with the id="defualtOpen" and click on it
-	document.getElementById("main-container").style.display = "block";
-	//document.getElementById("defaultOpen").click();
-	
+	document.getElementById("defaultOpen").click();
     DisplaySpecial(GetCurrentDay());
+
+    document.getElementById("main-container").style.display = "block";
     
 });
 
@@ -30,35 +30,17 @@ function OpenPage(location, elemnt)
 
 function DisplaySpecial(day){
 
-    var i, j, hhContent, nodes;
+    var dayClass, dayId;   
 
-	//Reset all day buttons
-    dayTabLink = document.getElementsByClassName("day-button");
-    for(i=0; i<dayTabLink.length; i++)
-    {	
-		dayTabLink[i].style.transform = "";
-		dayTabLink[i].style.boxShadow = "";
-        dayTabLink[i].style.backgroundColor = "";
-		dayTabLink[i].style.color = "";
-    }
+    $('.day-button').each(function (){
+        $(this).css("transform", "");
+        $(this).css("box-shadow", "");
+        $(this).css("background-color", "");
+        $(this).css("color", "");
+    });
 
-	//Grab each bars "day's specials"
-    hhContent = document.getElementsByClassName("day-special-container");
-
-    for (i=0; i<hhContent.length; i++)
-    {
-        nodes = hhContent[i].childNodes;
-
-        for(j=0;j< nodes.length; j++)
-        {
-            if(nodes[j].nodeName.toLowerCase() == 'p')
-            {
-                nodes[j].style.display = "none"
-            }
-        }
-    }
-
-    var dayClass, dayId;    
+    $('.day-special-container').children().css("display", "none");
+    
 
     if(day == 0)
     {
@@ -96,12 +78,9 @@ function DisplaySpecial(day){
         dayId = 'saturday';
     }
 
-    
-    for(i=0; i<document.getElementsByClassName(dayClass).length; i++)
-    {
-        document.getElementsByClassName(dayClass)[i].style.display = "block";
-    }
-	
+    $('.' + dayClass).each( function() {
+        $(this).css("display" , "block");
+    });
 	DayButtonPress(dayId);
 
 }
