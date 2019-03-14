@@ -4,7 +4,9 @@ $teal: teal;
 $value: 3%;
 $color: $teal;
 
-
+:root {
+    --hover: #{darken($color, $value)};
+}
 //-----------------Main container-----------------
 
 html {
@@ -22,6 +24,7 @@ body {
 	max-width: 52.5em;
 	min-width: 375px;
 	display: none;
+	padding: 0;
 }
 
 //-----------------Scaling style-----------------
@@ -58,7 +61,10 @@ body {
 
 .header {
 	background: $teal;
-	padding: 1.5rem .75rem;
+	//background: darken(teal, 7%);
+	//padding: 1.5rem .75rem;
+	padding: 0;
+	border-radius: 0;
 	margin: 0;
 	justify-content: center;
     align-content: center;
@@ -69,6 +75,20 @@ body {
 
 .title {
 	display: flex;
+}
+
+//-----------------Footer-----------------------------------\
+
+.footer {
+	background: black;
+	color: #fff;
+	bottom: 0;
+	//left: 0;
+	position: absolute;
+	width: 100%;
+	max-width: 52.5em;
+	min-width: 375px;
+	//display: flex;
 }
 
 //-----------------Days of the week buttons-----------------
@@ -104,10 +124,6 @@ body {
         color: white;
         outline: none;
     }
-}
-
-:root {
-    --hover: #{darken($color, $value)};
 }
 
 .day-button:hover,
