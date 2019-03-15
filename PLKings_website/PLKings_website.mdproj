@@ -29,5 +29,7 @@
       <Link>php\Includes\Constants.php</Link>
     </None>
     <None Include="styles.scss" />
+    <None Include="PrivacyPolicy.html" />
+    <None Include="Termsofuse.html" />
   </ItemGroup>
 </Project>

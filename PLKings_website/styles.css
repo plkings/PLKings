@@ -9656,6 +9656,10 @@ h3 {
     border-color: #dee2e6;
   }
 }
+:root {
+  --hover: #007171;
+}
+
 html {
   height: 100%;
 }
@@ -9671,6 +9675,7 @@ body {
   max-width: 52.5em;
   min-width: 375px;
   display: none;
+  padding: 0;
 }
 
 @media (max-width: 991.98px) {
@@ -9682,6 +9687,10 @@ body {
 .location-button,
 .card {
     border: 0.05em solid;
+  }
+
+  .title {
+    font-size: 2.5rem;
   }
 }
 @media (min-width: 992px) {
@@ -9695,6 +9704,57 @@ body {
     border: 0.125em solid;
   }
 }
+.header {
+  background: teal;
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.title {
+  display: flex;
+}
+
+.footer {
+  background: black;
+  color: #fff;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  max-width: 52.5em;
+  min-width: 375px;
+  height: 4rem;
+}
+
+.copyright {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: inherit;
+  max-width: inherit;
+  min-width: inherit;
+  position: absolute;
+  bottom: 0;
+}
+
+.links-container {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+.links-container a {
+  color: #fff;
+}
+
 .day-container {
   height: 3.75em;
   justify-content: center;
@@ -9724,10 +9784,6 @@ body {
   background-color: var(--hover);
   color: white;
   outline: none;
-}
-
-:root {
-  --hover: #007171;
 }
 
 .day-button:hover,
@@ -9837,6 +9893,10 @@ body {
 
 .card-text:last-child {
   margin-bottom: 1rem;
+}
+
+.privacy-policy-container a {
+  color: #fff;
 }
 
 /*# sourceMappingURL=styles.css.map */

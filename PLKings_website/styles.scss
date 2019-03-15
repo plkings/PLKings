@@ -80,15 +80,39 @@ body {
 //-----------------Footer-----------------------------------\
 
 .footer {
-	background: black;
-	color: #fff;
-	bottom: 0;
-	//left: 0;
-	position: absolute;
-	width: 100%;
-	max-width: 52.5em;
-	min-width: 375px;
-	//display: flex;
+    background: black;
+    color: #fff;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    max-width: 52.5em;
+    min-width: 375px;
+    height: 4rem;
+}
+
+.copyright {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    width: inherit;
+    max-width: inherit;
+    min-width: inherit;
+    position: absolute;
+    bottom: 0;
+}
+
+.links-container {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+
+    a {
+        color: #fff;
+    }
 }
 
 //-----------------Days of the week buttons-----------------
@@ -246,4 +270,11 @@ $sub-color: #fff;
 .hours {
 	//color: white;
 	//text-shadow:  -.5px -.5px 0 #000,.5px -.5px 0 #000,-.5px .5px 0 #000,.5px .5px 0 #000;
+}
+
+//-----------------Privacy Policy-----------------
+.privacy-policy-container {
+    a {
+        color: #fff;
+    }
 }
