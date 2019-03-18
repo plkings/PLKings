@@ -102,26 +102,42 @@
                 <div class="links-container">
                     <a class="privacy-policy" href="privacypolicy.html">Privacy Policy </a>
                     <a class="link terms-of-use" href="Termsofuse.html">Terms of Use</a>
-                    <a class="link contact" href="#">Contact</a>
+                    <a class="link contact" href="#" data-toggle="modal" data-target="#modal-message">Contact</a>
                 </div>
                 <div class="copyright">© 2018 Copyright: PLKings</div>
 			</div>
 		</div>
-		<div class="contact-container">
-			<form>
-				<div class="form-group">
-					<label for="name">Name</label>
-					<input type="text" class="form-control name-input" id="name" placeholder="Enter first and last name">
+		<div class="modal fade contact-container" id="modal-message" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">New Message</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group">
+								<label for="sender-name" class="col-form-label">Name:</label>
+								<input type="text" class="form-control name-input" id="sender-name" placeholder="Enter first and last name">
+							</div>
+							<div class="form-group">
+								<label for="sender-email" class="col-form-label">Email Address:</label>
+								<input type="email" class="form-control email-input" id="sender-email" placeholder="Enter email address">
+							</div>
+							<div class="form-group">
+								<label for="message-text" class="col-form-label">Message:</label>
+								<textarea class="form-control" id="message-text" rows="3"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Send message</button>
+					</div>
 				</div>
-				<div class="form-group">
-					<label for="email">Email Address</label>
-					<input type="email" class="form-control email-input" id="email" placeholder="Enter email address">
-				</div>
-				<div class="form-group">
-					<label for="message">Message</label>
-					<textarea class="form-control" id="message-input" rows="3"></textarea>
-				</div>
-			</form>
+			</div>	
 		</div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
