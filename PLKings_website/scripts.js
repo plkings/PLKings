@@ -8,6 +8,21 @@
     
 });
 
+
+//Send message to email server
+$(function(){
+    $('#send-message').click(function() {
+        var name, email, subject, message;
+
+        name = $('#sender-name').val();
+        email = $('#sender-email').val();
+        subject = $('#message-subject').val();
+        message = $('#message-text').val();
+        alert(name + email + subject + message);
+    });
+});
+
+
 //Need make this more scalable
 function OpenPage(location, elemnt)
 {

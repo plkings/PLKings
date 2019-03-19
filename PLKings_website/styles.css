@@ -9753,6 +9753,14 @@ body {
 }
 .links-container a {
   color: #fff;
+  margin: 0.5rem 2rem;
+}
+.links-container p {
+  margin: 0;
+}
+
+.middot {
+  color: #fff;
 }
 
 .day-container {
