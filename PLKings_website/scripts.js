@@ -1,4 +1,4 @@
- $(document).ready(function()
+$(document).ready(function()
 {
 	//Get the element with the id="defualtOpen" and click on it
 	document.getElementById("defaultOpen").click();
@@ -12,13 +12,22 @@
 //Send message to email server
 $(function(){
     $('#send-message').click(function() {
-        var name, email, subject, message;
-
-        name = $('#sender-name').val();
-        email = $('#sender-email').val();
-        subject = $('#message-subject').val();
-        message = $('#message-text').val();
-        alert(name + email + subject + message);
+      
+		var data = {
+			name: $('#sender-name').val(),
+			email: $('#sender-email').val(),
+			subject: $('#message-subject').val(),
+			message: $('#message-text').val()
+        };
+		
+		$.ajax({
+			type: "POST",
+			url: "email.php",
+			data: data,
+			success: function(){
+				//Do something
+			}
+		});
     });
 });
 
