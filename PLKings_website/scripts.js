@@ -22,9 +22,16 @@ $(function(){
 		
 		$.ajax({
 			type: "POST",
-			url: "email.php",
+			url: "http://localhost:8888/PLKings_website/email.php",
 			data: data,
-			success: function(){
+			success: function(response){
+                if(response.status == true)
+                {
+                    alert("True");
+                }
+                else{
+                    alert("False");
+                }
 				//Do something
 			}
 		});
