@@ -31,25 +31,43 @@ $(function(){
     });
 });
 
+//Grab bar data for given location
+function BarCard(location){
+
+}
 
 //Need make this more scalable
 function OpenPage(location, elemnt)
 {
 	var i, text;
-
-    //Display bar-cards with class the same as location
-    $('.bar-card').each(function (){
-        if($(this).hasClass(location)) {
-            $(this).css("display", "block");
-        }
-        else {
-            $(this).css("display", "none");
-        }
-    });
-
-    text = $(elemnt).text();
-
-    $('#dropdownMenuButton').html(text);
+	
+	//Display location in drop down menu
+	text = $(elemnt).text();
+	$('#dropdownMenuButton').html(text);
+	
+	//If element exists 
+	if($('.' + location)[0]){
+		//Display bar-cards with class the same as location
+		$('.bar-card').each(function (){
+			if($(this).hasClass(location)) {
+				$(this).css("display", "block");
+			}
+			else {
+				$(this).css("display", "none");
+			}
+		});
+	}
+	else{
+		//Call php file to gather data.
+		$.ajax({
+			type: "GET",
+			url: "GetBarData.php",
+			data: data,
+			success: function(){
+				//Do something
+			}
+		});
+	}
 }
 
 function DisplaySpecial(day){
