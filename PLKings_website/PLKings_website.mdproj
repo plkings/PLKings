@@ -17,5 +17,6 @@
     <None Include="PrivacyPolicy.html" />
     <None Include="Termsofuse.html" />
     <None Include="email.php" />
+    <None Include="GetBarData.php" />
   </ItemGroup>
 </Project>

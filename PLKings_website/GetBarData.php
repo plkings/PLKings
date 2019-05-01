@@ -8,7 +8,7 @@
 
 		$conn = mysql_connect($dbhost, $dbuser,$dbpass);
 		
-		if(! $conn) {
+		/*if(! $conn) {
 			die('Could not connect: ' . mysql_error());
 		}
 		
@@ -22,5 +22,6 @@
 				die('Could not get data: ' . mysql_error());
 			}
 		}
-	}
+        */
+	} 
 ?>

@@ -62,7 +62,6 @@ function OpenPage(location, elemnt)
 		$.ajax({
 			type: "GET",
 			url: "GetBarData.php",
-			data: data,
 			success: function(){
 				//Do something
 			}
