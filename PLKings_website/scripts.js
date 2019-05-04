@@ -24,8 +24,9 @@ $(function(){
 			type: "POST",
 			url: "email.php",
 			data: data,
-			success: function(){
-				//Do something
+			success: function(data){
+                //Do something
+                alert("You got here.");
 			}
 		});
     });
@@ -61,9 +62,12 @@ function OpenPage(location, elemnt)
 		//Call php file to gather data.
 		$.ajax({
 			type: "GET",
-			url: "GetBarData.php",
-			success: function(){
+            url: "GetBarData.php",
+            data: {dbLocation: text},
+			success: function(response){
 				//Do something
+                alert(response);
+                
 			}
 		});
 	}
