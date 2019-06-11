@@ -1,0 +1,26 @@
+<div class="card bar-card 5points">
+    <div class="row no-gutters">
+        <div class="col- logo-container">
+            <img src="images/mossFireGrilLogo.jpeg" class="card-img logo" alt="...">
+			<div class="col- bar-info-container">
+				<div class="card-body bar-info">
+					<h5 class="card-title">The Mossfire Grill</h5>
+					<p class="card-subtitle">1537 Margaret St, Jacksonville, FL 32204</p>
+					<p class="card-subtitle hours">Hours: 11AM-9PM</p>
+					<p class="card-subtitle hours">HH Hours: 3PM-7PM</p>
+				</div> 
+			</div>
+			<div class="col- bar-special-container">
+				<div class="card-body day-special-container">
+					<p class="card-text sunday-special">Happy Hour Night- Our Happy Hour runs 3pm-close! | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor  | $4.00 Glass House wine </p>
+					<p class="card-text monday-special">Margarita Night- $3.50 House, $4.50 Flavored all night long | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+					<p class="card-text tuesday-special">Smirnoff Vodka Night- $5 Smirnoff drinks all night long | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+					<p class="card-text wednesday-special">Margarita Night- $3.50 House, $4.50 Flavored all night long | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+					<p class="card-text thursday-special">Draft Beer Night- $2.50 Domestics, $3.50 Microbrews all night long | $3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+					<p class="card-text friday-special">$3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+					<p class="card-text saturday-special">$3.50 House Margaritas | Discounted Draft Beer | Discounted Well Liquor | $4.00 Glass House wine</p>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>

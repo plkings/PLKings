@@ -1,5 +1,14 @@
 <?php
 
+    function CreateDOM(DOMDocument $domObject, $element, $attribute, $value){
+        $div = $domObject->createElement($element);
+        $divAttribute = $domObject->createAttribute($attribute);
+        $divAttribute->value = $value;
+        $div->appendChild($divAttribute);
+        return $div;
+        
+    }
+
 	if($_SERVER['REQUEST_METHOD'] == 'GET'){
 
 		$user = 'root';
@@ -33,18 +42,27 @@
                 //Check if query is valid
                 if($retVal){
                     
-                    //Adding location to array
-                    $returnArray = array();
-                    $returnArray['location'] = $dbLocation;
+                    //Create bar-card div with location class name
+                    $dom = new DOMDocument();
+                    
+                    //Crate the dom objects
+                    $barCardDiv = CreateDOM($dom, "div", "class", 'card bar-card ' . str_replace(' ', '_', $dbLocation));
+                    $rowDiv = CreateDOM($dom, "div", "class", "row no-gutters");
+                    
+                    $logoContainerDiv = CreateDOM($dom, "div", "class", "col- logo-container");
+                    $barInfoContainerDiv = CreateDOM($dom, "div", "class", "bar-info-container");
+                    $barInfoDiv = CreateDOM($dom, "div", "class", "card-body bar-info");
+
+                    $barSpecialsContainerDiv = CreateDOM($dom, "div", "class", "col- bar-special-container");
+                    $daySpecialContainer = CreateDOM($dom, "div", "class", "day-special-container"); 
 
                     if(mysqli_num_rows($retVal) > 0)
                     {   
-                        $barArray = array();
+                        //$barArray = array();
 
                         //Add bar information to array for each bar
                         while($row = mysqli_fetch_array($retVal, MYSQLI_ASSOC))
                         {
-
                             
                             //Gather Bar information
                             $row_array['BarName'] = $row['Name'];
@@ -55,11 +73,15 @@
                             $barSpecialQuery= "SELECT * FROM Bar_specials WHERE Bar_id='". $row_array['BarID'] ."'";
                             $barSpecial = mysqli_query($link, $barSpecialQuery);
 
+                            $barTitle = CreateDOM($dom, "h5", "class", "card-title");
+                            $test = CreateDOM($dom, "div", "class", "test");
+                            
+                            
                             if($barSpecial)
                             {
+                                /*
                                 $barSpecialArray = array();
 
-                                //Here is where it fails
                                 if(mysqli_num_rows($barSpecial) > 0)
                                 {
                                     while($row2 = mysqli_fetch_array($barSpecial, MYSQLI_ASSOC))
@@ -75,30 +97,50 @@
                                     }
                                     //Needs to be rename
                                     $row_array['Bars_Specials'] = $barSpecialArray;
-                                    //array_push($row_array, $row_array2);
                                 }
                                 else{
 
                                 }
-                           }
-                           else{
+                                */
+                            }
+                            else
+                            {
                                 echo "Error: " . mysqli_error($link);
-                           }
+                            }
+
+                            $barInfoDiv->appendChild($barTitle);
+
                            
-                            array_push($barArray, $row_array);
+                            //array_push($barArray, $row_array);
                         }
                     }
                     else {
                         echo "No results found";
                     }
 
+                    //Append the objects
+                    $barInfoContainerDiv->appendChild($barInfoDiv);
+                    $logoContainerDiv->appendChild($barInfoContainerDiv);
+                    
+                    $barSpecialsContainerDiv->appendChild($daySpecialContainer);
+
+                    $rowDiv->appendChild($logoContainerDiv);
+                    $rowDiv->appendChild($barSpecialsContainerDiv);
+
+                    $barCardDiv->appendChild($rowDiv);
+                    $dom->appendChild($barCardDiv);
+                    
+                    echo $dom->saveHTML();
+
                     //Add bar array into main array
-                    $returnArray['Bars'] = $barArray;
-                    echo json_encode($returnArray);
+                    //$returnArray['Bars'] = $barArray;
+                    //echo json_encode($returnArray);
+                    
                 }
                 else{
-                    echo "Error: " . mysqli_error($link);
+                    echo "Error: " . mysqli_error("Error: " . $link);
                 }
+                
             }
         }
 	} 
