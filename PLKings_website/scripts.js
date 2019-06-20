@@ -66,7 +66,8 @@ function OpenPage(location, elemnt)
             data: {dbLocation: text},
 			success: function(response){
 				//Do something
-                alert(response);
+                //alert(response);
+                $('listing-container').append(response);
                 
 			}
 		});
@@ -123,7 +124,7 @@ function DisplaySpecial(day){
         dayId = 'saturday';
     }
 
-    $('.' + dayClass).each( function() {
+    $('.' + day).each( function() {
         $(this).css("display" , "block");
     });
 	DayButtonPress(dayId);

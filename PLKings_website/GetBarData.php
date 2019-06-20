@@ -5,8 +5,7 @@
         $divAttribute = $domObject->createAttribute($attribute);
         $divAttribute->value = $value;
         $div->appendChild($divAttribute);
-        return $div;
-        
+        return $div;   
     }
 
 	if($_SERVER['REQUEST_METHOD'] == 'GET'){
@@ -65,51 +64,65 @@
                         {
                             
                             //Gather Bar information
-                            $row_array['BarName'] = $row['Name'];
+                            //$row_array['BarName'] = $row['Name'];
                             $address = $row['Street'] . ", " . $row['City'] . ", " . $row['State'] . " " . $row['Zip'];
-                            $row_array['BarAddress'] = $address;
-                            $row_array['BarID'] = $row['Bar_id'];
-
-                            $barSpecialQuery= "SELECT * FROM Bar_specials WHERE Bar_id='". $row_array['BarID'] ."'";
-                            $barSpecial = mysqli_query($link, $barSpecialQuery);
+                            //$row_array['BarAddress'] = $address;
+                            //$row_array['BarID'] = $row['Bar_id'];
 
                             $barTitle = CreateDOM($dom, "h5", "class", "card-title");
-                            $test = CreateDOM($dom, "div", "class", "test");
+                            $barTitle->appendChild($dom->createTextNode($row['Name']));
                             
-                            
+                            $barAddress = CreateDOM($dom, "p", "class", "card-subtitle");
+                            $barAddress->appendChild($dom->createTextNode($address));
+
+                            $barInfoDiv->appendChild($barTitle);
+                            $barInfoDiv->appendChild($barAddress);
+
+                            $barSpecialQuery= "SELECT * FROM Bar_specials WHERE Bar_id='". $row['Bar_id'] ."'";
+                            $barSpecial = mysqli_query($link, $barSpecialQuery);
+
                             if($barSpecial)
                             {
-                                /*
-                                $barSpecialArray = array();
+                                
+                                //$barSpecialArray = array();
+                                
 
                                 if(mysqli_num_rows($barSpecial) > 0)
                                 {
+                                    
                                     while($row2 = mysqli_fetch_array($barSpecial, MYSQLI_ASSOC))
                                     {
-                                        //Apply bar specials to day; 0=Sundayi
-                                        $day = $row2['Day'];
-                                        $row_array2["Special"] = $row2['Specials'];
-                                        $row_array2["Hours"] = $row2['Hours'];
-                                        $row_array2["AgeReqs"] = $row2['AgeReqs'];
-                                        
+                                        //Apply bar specials to day; 0=Sunday
+                                        //$row_array2["AgeReqs"] = $row2['AgeReqs'];
 
-                                        array_push($barSpecialArray, $row_array2);
+                                        $dayDiv = CreateDOM($dom, "p", "class", $row2['Day']);
+                                        $dayDiv->appendChild($dom->createTextNode($row2['Specials']));
+
+                                        $hoursDiv = CreateDOM($dom, "p", "class", "card-subtitle hours " .$row2['Day']);
+                                        $hoursDiv->appendChild($dom->createTextNode($row2['Hours']));
+                                        
+                                        $hoursDiv2 = CreateDOM($dom, "p", "class", "card-subtitle hours " .$row2['Day']);
+                                        $hoursDiv2->appendChild($dom->createTextNode($row2['HH_Hours']));
+
+                                        //Add age reqs here
+
+                                        $daySpecialContainer->appendChild($dayDiv);
+                                        $barInfoDiv->appendChild($hoursDiv);
+                                        $barInfoDiv->appendChild($hoursDiv2);
                                     }
                                     //Needs to be rename
                                     $row_array['Bars_Specials'] = $barSpecialArray;
+                                    
                                 }
                                 else{
 
                                 }
-                                */
+                                
                             }
                             else
                             {
                                 echo "Error: " . mysqli_error($link);
                             }
-
-                            $barInfoDiv->appendChild($barTitle);
-
                            
                             //array_push($barArray, $row_array);
                         }
