@@ -93,6 +93,7 @@
                                     while($row2 = mysqli_fetch_array($barSpecial, MYSQLI_ASSOC))
                                     {
                                         //Apply bar specials to day; 0=Sunday
+
                                         //$row_array2["AgeReqs"] = $row2['AgeReqs'];
 
                                         $dayDiv = CreateDOM($dom, "p", "class", $row2['Day']);

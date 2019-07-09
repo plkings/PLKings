@@ -3,14 +3,15 @@ $(document).ready(function()
 	//Get the element with the id="defualtOpen" and click on it
 	document.getElementById("defaultOpen").click();
     DisplaySpecial(GetCurrentDay());
-
     document.getElementById("main-container").style.display = "block";
-    
 });
 
 
 //Send message to email server
+/*
 $(function(){
+    //Check if element already exists
+
     $('#send-message').click(function() {
       
 		var data = {
@@ -31,11 +32,7 @@ $(function(){
 		});
     });
 });
-
-//Grab bar data for given location
-function BarCard(location){
-
-}
+*/
 
 //Need make this more scalable
 function OpenPage(location, elemnt)
@@ -64,10 +61,11 @@ function OpenPage(location, elemnt)
 			type: "GET",
             url: "GetBarData.php",
             data: {dbLocation: text},
+            async: false,
 			success: function(response){
 				//Do something
                 //alert(response);
-                $('listing-container').append(response);
+                $('.listing-container').append(response);
                 
 			}
 		});
@@ -86,6 +84,7 @@ function DisplaySpecial(day){
     });
 
     $('.day-special-container').children().css("display", "none");
+    $('.hours').css("display", "none");
     
 
     if(day == 0)
