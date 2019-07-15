@@ -52,6 +52,8 @@
                     $barInfoContainerDiv = CreateDOM($dom, "div", "class", "bar-info-container");
                     $barInfoDiv = CreateDOM($dom, "div", "class", "card-body bar-info");
 
+                    $logoLinkDiv =  CreateDom($dom, "img", "class", "card-img logo");
+
                     $barSpecialsContainerDiv = CreateDOM($dom, "div", "class", "col- bar-special-container");
                     $daySpecialContainer = CreateDOM($dom, "div", "class", "day-special-container"); 
 
@@ -64,10 +66,11 @@
                         {
                             
                             //Gather Bar information
-                            //$row_array['BarName'] = $row['Name'];
                             $address = $row['Street'] . ", " . $row['City'] . ", " . $row['State'] . " " . $row['Zip'];
-                            //$row_array['BarAddress'] = $address;
-                            //$row_array['BarID'] = $row['Bar_id'];
+                            $logoLink = $row['Logo'];
+
+                            $logoLinkAttribute = $dom->createAttribute("src");
+                            $logoLinkAttribute->value = $logoLink;
 
                             $barTitle = CreateDOM($dom, "h5", "class", "card-title");
                             $barTitle->appendChild($dom->createTextNode($row['Name']));
@@ -124,8 +127,6 @@
                             {
                                 echo "Error: " . mysqli_error($link);
                             }
-                           
-                            //array_push($barArray, $row_array);
                         }
                     }
                     else {
@@ -133,7 +134,10 @@
                     }
 
                     //Append the objects
+                    //Think about OOO here. This maybe be beter in the while loop instead
                     $barInfoContainerDiv->appendChild($barInfoDiv);
+                    $logoLinkDiv->appendChild($logoLinkAttribute);
+                    $logoContainerDiv->appendChild($logoLinkDiv);
                     $logoContainerDiv->appendChild($barInfoContainerDiv);
                     
                     $barSpecialsContainerDiv->appendChild($daySpecialContainer);

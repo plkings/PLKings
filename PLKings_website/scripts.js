@@ -2,7 +2,6 @@ $(document).ready(function()
 {
 	//Get the element with the id="defualtOpen" and click on it
 	document.getElementById("defaultOpen").click();
-    DisplaySpecial(GetCurrentDay());
     document.getElementById("main-container").style.display = "block";
 });
 
@@ -37,17 +36,19 @@ $(function(){
 //Need make this more scalable
 function OpenPage(location, elemnt)
 {
-	var i, text;
-	
+	var i, text, replaced;
+
 	//Display location in drop down menu
 	text = $(elemnt).text();
 	$('#dropdownMenuButton').html(text);
-	
+
+    replaced = location.replace(/ /g, '_');
+
 	//If element exists 
-	if($('.' + location)[0]){
+	if($('.' + replaced)[0]){
 		//Display bar-cards with class the same as location
 		$('.bar-card').each(function (){
-			if($(this).hasClass(location)) {
+			if($(this).hasClass(replaced)) {
 				$(this).css("display", "block");
 			}
 			else {
@@ -56,20 +57,22 @@ function OpenPage(location, elemnt)
 		});
 	}
 	else{
+        $('.bar-card').each(function(){
+            $(this).css("display", "none");
+        });
+
 		//Call php file to gather data.
 		$.ajax({
 			type: "GET",
             url: "GetBarData.php",
             data: {dbLocation: text},
-            async: false,
-			success: function(response){
-				//Do something
-                //alert(response);
-                $('.listing-container').append(response);
-                
-			}
-		});
-	}
+            async: false
+		}).done(function (response){
+            $('.listing-container').append(response);
+        });
+    }
+    
+    DisplaySpecial(GetCurrentDay());
 }
 
 function DisplaySpecial(day){
